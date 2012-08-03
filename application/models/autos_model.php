@@ -52,6 +52,21 @@ class Autos_model extends CI_Model {
 		return $data;
 	}
 
+	public function get_byid($id_auto)
+	{
+		//SELECT DISTINCT anio_auto FROM autos 
+		$consulta = $this->db->select()->where("id_auto", $id_auto)->order_by('anio_auto','desc')->get('autos');
+		if ($consulta->num_rows()){
+			$data = $consulta->result();
+
+		}else{
+			$data = false;
+
+		}
+		$consulta->free_result();
+		return $data;
+	}
+
 }
 
 /* End of file welcome.php */

@@ -59,6 +59,16 @@ class Welcome extends CI_Controller {
 
 	}
 
+		public function details()
+	{
+		$data['anios'] = $this->autos->get_years();
+		$data['auto'] =$this->autos->get_byid($this->uri->segment(3));
+
+		
+		$this->load->view('details', $data);
+	}
+
+
 
 }
 

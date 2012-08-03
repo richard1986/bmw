@@ -4,22 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>bmw</title>
-		<link rel="stylesheet" type="text/css" href="<?=base_url()?>css/default.css">
-		<!--[if gte IE 9]>
-  <style type="text/css">
-    .gradient {
-       filter: none;
-    }
-  </style>
-<![endif]-->
+<?php require_once("links.php"); ?>
 	</head>
 	<body>
-		<header>
-			<div class="wrapper">
-				<div id="logo"><img src="<?=base_url()?>img/bmw-logo.png"  alt=""></div>
-			<?php require_once("menu.php"); ?>	
-			</div>
-		</header>
+		<?php require_once("header.php"); ?>
 		<div class="wrapper">
 			<div id="modelos">
 				<form action="#">
@@ -45,7 +33,7 @@
 				<article>
 					<div id="imagen"><img src="<?=base_url()?><?=$row->foto_auto?>" alt=""></div>
 					<div id="texto">
-						<h3><?=$row->modelo_auto?> (<?=$row->anio_auto?>)</h3>
+						<h3><a href="<?=base_url()?>welcome/details/<?=$row->id_auto?>"><?=$row->modelo_auto?> (<?=$row->anio_auto?>)</a></h3>
 						<p><?=substr($row->descripcion_auto, 0, 300)?>...</p>
 					</div>
 				</article>
@@ -55,11 +43,6 @@
 
 			</div>
 		</div>
-		<footer>
-			<div class="wrapper">
-			<div id="logo"><img src="<?=base_url()?>img/bmw-logo.png"  alt=""></div>
-			<p>Desarrollado por: Richard J Paredes O, Ricardo Azuaje, Nestor Moreno y Miguel Montilla</p>
-			</div>
-		</footer>
+		<?php require_once("footer.php"); ?>
 	</body>
 </html>
