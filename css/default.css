@@ -11,6 +11,8 @@
 		margin: 0 0 10px 0;
 		min-height:150px;
 	}
+
+
 	 .wrapper{
 		display: block;
 		margin: 0 auto;
@@ -25,10 +27,40 @@
 		max-width: 100%;
 		max-height: 100%;
 	}
+	.wrapper #menu {
+		list-style: none;
+		margin: 5px 0px;
+		padding: 0;
+		text-align: center;
+	}
+	.wrapper #menu li {
+		display: inline-block;
+		width: 103px;
+	}
+	.wrapper #menu li a {
+		color: #2C539E;
+		font-size: .8em;
+		font-weight: bold;
+	}
+	.wrapper #modelos {
+		margin-bottom: 15px; 
+	}
+	.wrapper #modelos form {
+		width: 150px;
+		margin: 0 auto;
+	}
 	.wrapper #content article {
 		border-bottom: thin solid #aaa;
 		margin-bottom: 20px;
 		text-align: center;
+	}
+	.wrapper #content article #imagen {
+		text-align: left;
+		min-height: 150px;
+	}
+	.wrapper #content article #imagen img{
+		width: 100%;
+		max-height:100%;
 	}
 	.wrapper #content article #texto{
 		//border: thin solid #aaa;
@@ -59,6 +91,71 @@
 	footer p {
 		text-align: center;
 	}
+	.wrapper #info article {
+		border-bottom: thin solid #aaa;
+		margin-bottom: 20px;
+		min-height: 400px;
+	}
+	.wrapper #info article #texto{
+		//border: thin solid #aaa;
+		text-align: left;
+		font-size: 1em;
+	}
+	.wrapper #info article #texto h3, .wrapper #info article #texto p {
+		//border: thin solid #aaa;	
+		margin: 15px;
+	}
+	.wrapper #info article #texto p {
+		color: #888;
+		line-height: 2em;
+	}	
+
+/**************************************************************************/
+	.centrado {
+		text-align: center;
+	}
+
+	.wrapper #info article #texto form {
+
+		border:none;
+		-moz-border-radius:1em;
+		-webkit-border-radius:1em;
+		border-radius:1em;
+
+		-moz-box-shadow: 0px 0px 12px #aaa;
+		-webkit-box-shadow: 0px 0px 12px #aaa;
+		box-shadow: 0px 0px 12px #aaa;
+
+
+		background-color: #eee;
+
+		padding: 2em;
+		max-width: 300px;
+		margin: 40px auto;
+	}	
+	.wrapper #info article #texto form input {
+
+		border:#aaa thin solid;
+		-moz-border-radius:3px;
+		-webkit-border-radius:3px;
+		border-radius:3px;
+
+		padding: 2px;
+		display: block;
+		margin: 10px 0;
+	}
+	.wrapper #info article #texto form label {
+		color: #666;
+		font-weight: bold;
+
+	}
+	
+
+
+/**************************************************************************/
+
+
+
 
 /* Tablet */
 @media only screen and (min-width: 768px) {
@@ -67,11 +164,21 @@
 	}
 
 	.wrapper #content article {
-		height: 500px;
+		height: 200px;
+	}
+	.wrapper #content article #imagen{
+		display: inline-block;
+		max-width: 380px;
+		height: 180px;		
 	}
 	.wrapper #content article #texto{
 		display: inline-block;
-		max-width: 600px;
+		max-width: 300px;
+
+
+
+
+
 
 	}
 }
@@ -81,8 +188,13 @@
 	.wrapper {
 		max-width: 960px;
 	}
+	.wrapper #content article #imagen{
+		display: inline-block;
+		width: 440px;
+		min-height: 180px;	
+	}
 	.wrapper #content article #texto{
-		min-width: 700px;
+		min-width: 500px;
 		vertical-align: top;
 	}
 }

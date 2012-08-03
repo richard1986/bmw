@@ -1,0 +1,67 @@
+<!doctype html>
+var html5cw = {};
+html5cw.webdb = {};
+html5cw.webdb.db = null;
+html5cw.webdb.open = function() {
+  var dbSize = 5 * 1024 * 1024; // 5MB
+  html5cw.webdb.db = openDatabase("List", "1.0", "itemsList", dbSize);
+}
+ 
+html5cw.webdb.onError = function(tx, e) {
+  alert("Ha ocurrido un error: " + e.message);
+}
+ 
+html5cw.webdb.onSuccess = function(tx, r) {
+  // re-escribir los datos
+  html5cw.webdb.getAllitemsList(loaditemsList);
+}
+
+
+
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Vision</title>
+		<link rel="stylesheet" type="text/css" href="css/default.css">
+		<!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->
+	</head>
+	<body>
+		<header>
+			<div class="wrapper">
+				<div id="logo"><img src="img/bmw-logo.png"  alt=""></div>
+				<ul id="menu"><!--
+					--><li><a href="index.html">Home</a></li><!--
+					--><li><a href="resena.html">Reseña</a></li><!--
+					--><li><a href="mision.html">Mision</a></li><!--
+					--><li><a href="vision.html">Vision</a></li><!--
+					--><li><a href="sesion.html">Sesion</a></li><!--
+				--></ul>	
+			</div>
+		</header>
+		<div class="wrapper">
+			
+			<div id="info">
+				<article>
+					<div id="texto">
+						<h3>Visión de BMW</h3>
+						<p>Ser reconocidos en el mercado como la mejor opción para la adquisición de automóviles de lujo y deportivos.</p>
+					</div>
+				</article>
+			</div>
+		</div>
+		<footer>
+			<div class="wrapper">
+			<div id="logo"><img src="img/bmw-logo.png"  alt=""></div>
+			<p>Desarrollado por: Richard J Paredes O, Ricardo Azuaje, Nestor Moreno y Miguel Montilla</p>
+			</div>
+		</footer>
+	</body>
+</html>
